@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:testXamarin"
+             x:Class="testXamarin.MainPage">
+    <!--xmlns:radial="clr-namespace:RadialGauge;assembly=RadialGauge"-->
+    <ScrollView>
+    <StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="Blue" Padding="5">
+            <Label Text="Meteo des villes" HorizontalOptions="Center"/>
+        </StackLayout>
+            <Switch IsToggled="false" HorizontalOptions="Fill" OnColor="Black" x:Name="switc" Toggled="fonctswi"/>
+            <Entry Placeholder="Saisir la ville" x:Name="cp" Keyboard="Text" Completed="Button_Clicked" IsVisible="false"/>
+            <Button Text="Méteo Fosses" Clicked="Button_Clicked_Fosses" IsVisible="false" x:Name="foss"/>
+            <Button Text="Méteo Sarcelles" Clicked="Button_Clicked_Sarcelles" IsVisible="false" x:Name="sarc"/>
+            <Button Text="Méteo Jagny-sous-Bois" Clicked="Button_Clicked_Jagny" IsVisible="false" x:Name="jagn"/>
+            <Button Text="Meteo Localisation" Clicked="Button_Clicked_1" IsVisible="true" x:Name="loca"/>
+        <Label Text="" x:Name="LabelLocation"/>
+        <!--<Label Text=""
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="label1"/>-->
+        <Label Text="" x:Name="ville" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+            <Frame x:Name="result" Margin="10" Padding="15" BorderColor="Gray" BackgroundColor="#2C6683" IsVisible="False">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="" FontSize="Large" x:Name="temp" VerticalTextAlignment="Center"/>
+                        <Image Source="" x:Name="img" HeightRequest="50" WidthRequest="50"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="vent : "/>
+                        <Label Text="" x:Name="vent"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="humidité : "/>
+                        <Label Text="" x:Name="humidité"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="visibilité : "/>
+                        <Label Text="" x:Name="visibilité"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="lever soleil : "/>
+                        <Label Text="" x:Name="lever"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="coucher soleil : "/>
+                        <Label Text="" x:Name="coucher"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <!--<Button Text="Voir la meteo" Clicked="Button_Clicked"/>-->
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
+
